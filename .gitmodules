@@ -1,0 +1,3 @@
+[submodule "intermine"]
+	path = intermine
+	url = git@github.com:jdmswong/intermine.git
