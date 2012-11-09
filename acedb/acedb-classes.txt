@@ -18,6 +18,7 @@ Method
 Map
 gMap
 Locus
+Gene
 2_point_data
 Multi_pt_data
 Clone
@@ -59,6 +60,7 @@ RNAi
 Expr_pattern
 Gene_regulation
 Expression_cluster
+Antibody
 Microarray_results
 SAGE_tag
 YH
