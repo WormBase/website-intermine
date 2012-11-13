@@ -3,14 +3,14 @@ package wormbase.model.parser;
 import java.io.*;
 import java.util.*;
 
-public class CopyCharacters {
+public class CopyFile {
     public static void main(String[] args) {
     	String infile = "/home/jwong/git/website-intermine/acedb-dev/acedb/datafiles/gene1.jace";
     	String outfile = "DELETE.txt";
     	
-    	CopyCharacters obj = new CopyCharacters();
+    	CopyFile obj = new CopyFile();
     	try {
-			obj.read2list(infile);
+			obj.copyLines(infile,outfile);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -18,6 +18,29 @@ public class CopyCharacters {
     	System.out.println("fin.");
     }
 
+    public void copyLines(String infile, String outfile) throws IOException{
+    	
+    	 BufferedReader inputStream = null;
+         PrintWriter outputStream = null;
+
+         try {
+             inputStream = new BufferedReader(new FileReader(infile));
+             outputStream = new PrintWriter(new FileWriter(outfile));
+
+             String l;
+             while ((l = inputStream.readLine()) != null) {
+                 outputStream.println(l);
+             }
+         } finally {
+             if (inputStream != null) {
+                 inputStream.close();
+             }
+             if (outputStream != null) {
+                 outputStream.close();
+             }
+         }
+    }
+    
     public void copyFile(String infile, String outfile) throws IOException {
     	
         FileReader inputStream = null;
