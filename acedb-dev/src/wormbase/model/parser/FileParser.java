@@ -23,12 +23,13 @@ public class FileParser {
 	 * @throws IOException 
 	 */
 	public String[] getDataObj() throws IOException{
-		ArrayList lines = new ArrayList();
+		ArrayList<String> lines = new ArrayList<String>();
 		
 		String line;
         try {
-			while ((line = inputStream.readLine()) != null) {
+			while ((line = (String) inputStream.readLine()) != null) {
 			    System.out.println(line);
+			    lines.add(line);
 			}
 		} finally {
             if (inputStream != null) {
@@ -36,7 +37,6 @@ public class FileParser {
             }
 		}
 
-		
-		return (String[]) lines.toArray();
+		return lines.toArray(new String[0]);
 	}
 }
