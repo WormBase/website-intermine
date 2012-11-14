@@ -5,7 +5,7 @@ import java.util.regex.*;
 
 public class ModelParser {
 
-	private String jaceFile = "/home/jwong/git/website-intermine/acedb-dev/acedb/datafiles/gene1.jace";
+	private String jaceFile = "/home/jwong/git/website-intermine/acedb-dev/acedb/datafiles/gene3.jace";
 	
 	/**
 	 * @param args
@@ -15,7 +15,12 @@ public class ModelParser {
 		ModelParser mp = new ModelParser();
 		try {
 			FileParser fp = new FileParser(mp.jaceFile);
-			fp.getDataObj();
+			
+			String[] dataObj = fp.getDataObj();
+			dataObj = fp.getDataObj();
+			dataObj = fp.getDataObj();
+			dataObj = fp.getDataObj();
+			
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

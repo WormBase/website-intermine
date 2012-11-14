@@ -26,17 +26,28 @@ public class FileParser {
 		ArrayList<String> lines = new ArrayList<String>();
 		
 		String line;
+		boolean startedObj = false; // Switched if non-whitespace passed in 
         try {
 			while ((line = (String) inputStream.readLine()) != null) {
-			    System.out.println(line);
+			    
+				
+			    if(line.equals("")){
+			    	if(startedObj){
+			    		break;
+			    	}else{
+			    		continue;
+			    	}
+			    }else if(startedObj != true){
+			    	startedObj = true;
+			    }
 			    lines.add(line);
 			}
 		} finally {
-            if (inputStream != null) {
-                inputStream.close();
+            if (inputStream != null && inputStream.ready() != true) {
+               inputStream.close();
             }
 		}
 
-		return lines.toArray(new String[0]);
+		return lines.toArray(new String[lines.size()]);
 	}
 }
