@@ -1,4 +1,4 @@
-package wormbase.model.parser;
+package wormbase.model.test;
 
 import java.io.*;
 import java.util.*;
