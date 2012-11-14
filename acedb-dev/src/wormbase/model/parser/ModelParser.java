@@ -16,10 +16,11 @@ public class ModelParser {
 		try {
 			FileParser fp = new FileParser(mp.jaceFile);
 			
-			String[] dataObj = fp.getDataObj();
-			dataObj = fp.getDataObj();
-			dataObj = fp.getDataObj();
-			dataObj = fp.getDataObj();
+			String[] dataObj;
+			// foreach ""-separated paragraph in jacefile
+			while( (dataObj = fp.getDataObj()) != null ){ 
+				System.out.println(dataObj.length);
+			}
 			
 		} catch (IOException e) {
 			e.printStackTrace();
