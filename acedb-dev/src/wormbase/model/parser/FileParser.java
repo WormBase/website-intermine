@@ -5,8 +5,8 @@ import java.util.*;
 
 public class FileParser {
 
-	private BufferedReader inputStream;
-	private boolean isStreamClosed = false; 
+	private MyBufferedReader inputStream;
+	
 	
 	/**
 	 * @param args
@@ -14,7 +14,7 @@ public class FileParser {
 	 */
 	public FileParser(String jaceFile) throws IOException {
         
-		inputStream = new BufferedReader(new FileReader(jaceFile));
+		inputStream = new MyBufferedReader(new FileReader(jaceFile));
 
 	}
 	
@@ -24,9 +24,10 @@ public class FileParser {
 	 * @throws IOException 
 	 */
 	public String[] getDataObj() throws IOException{
-		if( isStreamClosed ){
+		if( inputStream.isStreamClosed() ){
 			return null;
 		}
+		
 		
 		ArrayList<String> lines = new ArrayList<String>();
 		
@@ -48,8 +49,7 @@ public class FileParser {
 			    lines.add(line);
 			}
 		} finally {
-            if (inputStream != null && inputStream.ready() != true) {
-            	isStreamClosed = true;
+            if (inputStream.isStreamClosed() != true) {
             	inputStream.close();
             }
 		}
@@ -60,8 +60,17 @@ public class FileParser {
 	/**
 	 * Applies command to inputStream global variable
 	 * @param command can be "reset" or "close"
+	 * @throws IOException 
 	 */
-	public void streamCmd(String command){
-		
+	public int streamCmd(String command) throws IOException{
+		if(command.equals("close")){
+			inputStream.close();
+			return 1;
+		}else if(command.equals("reset")){
+			inputStream.reset();
+			return 1;
+		}else{
+			return -1;
+		}
 	}
 }
