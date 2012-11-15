@@ -31,12 +31,11 @@ public class FileParser {
 		
 		ArrayList<String> lines = new ArrayList<String>();
 		
-		String line;
+		String line = null;
 		boolean startedObj = false; // Switched if non-whitespace passed in 
         try {
 			while ((line = (String) inputStream.readLine()) != null) {
 			    
-				
 			    if(line.equals("")){
 			    	if(startedObj){
 			    		break;
@@ -49,7 +48,7 @@ public class FileParser {
 			    lines.add(line);
 			}
 		} finally {
-            if (inputStream.isStreamClosed() != true) {
+            if (line == null) {
             	inputStream.close();
             }
 		}
@@ -65,9 +64,6 @@ public class FileParser {
 	public int streamCmd(String command) throws IOException{
 		if(command.equals("close")){
 			inputStream.close();
-			return 1;
-		}else if(command.equals("reset")){
-			inputStream.reset();
 			return 1;
 		}else{
 			return -1;
