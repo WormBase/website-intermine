@@ -8,8 +8,13 @@ public class ModelParser {
 	/**
 	 * 
 	 */
-	public ModelParser(){
+	String modelFile;
+	
+	public ModelParser(String _modelFile){
+		modelFile = _modelFile;
 		
 	}
+	
+	
 
 }

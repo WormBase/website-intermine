@@ -22,7 +22,6 @@ public class TestClass {
 		
 		String jaceFile = "/home/jwong/git/website-intermine/acedb-dev/acedb/datafiles/gene3.jace";
 		
-		ModelParser mp = new ModelParser();
 		try {
 			FileParser fp = new FileParser(jaceFile);
 			

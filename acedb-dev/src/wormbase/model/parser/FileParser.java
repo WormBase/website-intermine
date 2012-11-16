@@ -8,6 +8,17 @@ import java.util.*;
 /**
  *  This class handles the parsing of the flat files into data structures
  *  for individual processing.
+ *  
+ *  Sample use:
+ *
+ *  FileParser fp = new FileParser(jaceFile);
+ *	
+ *	String[] dataObj;
+ *	// foreach ""-separated paragraph in jacefile
+ *	while( (dataObj = fp.getDataObj()) != null ){ 
+ *		// do something
+ *	}
+ *
  */
 public class FileParser {
 
