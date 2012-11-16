@@ -1,8 +1,14 @@
 package wormbase.model.parser;
-
+/*
+ * 
+ */
 import java.io.*;
 import java.util.*;
 
+/**
+ *  This class handles the parsing of the flat files into data structures
+ *  for individual processing.
+ */
 public class FileParser {
 
 	private MyBufferedReader inputStream;
@@ -58,7 +64,7 @@ public class FileParser {
 	
 	/**
 	 * Applies command to inputStream global variable
-	 * @param command can be "reset" or "close"
+	 * @param command only "close" accepted
 	 * @throws IOException 
 	 */
 	public int streamCmd(String command) throws IOException{
