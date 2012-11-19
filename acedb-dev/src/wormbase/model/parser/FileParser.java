@@ -25,9 +25,9 @@ public class FileParser {
 	}
 	
 	/**
-	 * 
+	 * Returns multiline chunks of text separated by newlines.
 	 * @return Array of strings comprising the Ace data object
-	 * @throws IOException 
+	 * @throws IOException  
 	 */
 	public String[] getDataObj() throws IOException{
 		if( inputStream.isStreamClosed() ){

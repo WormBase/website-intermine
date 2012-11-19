@@ -20,23 +20,14 @@ public class TestClass {
 	 */
 	public static void main(String[] args) {
 		
-		String jaceFile = "/home/jwong/git/website-intermine/acedb-dev/acedb/datafiles/gene3.jace";
+		String datafile = "test/test_datafiles/models.wrm";
 		
-		ModelParser mp = new ModelParser();
-		try {
-			FileParser fp = new FileParser(jaceFile);
-			
-			String[] dataObj;
-			// foreach ""-separated paragraph in jacefile
-			while( (dataObj = fp.getDataObj()) != null ){ 
-				System.out.println(dataObj.length);
-			}
-			
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		ModelParser mp = new ModelParser(datafile);
+
 		
 		System.out.println("End program");
 	}
+	
+	
 
 }
