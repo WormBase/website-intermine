@@ -5,8 +5,8 @@ package wormbase.model.test;
 
 import java.io.IOException;
 
-import wormbase.model.parser.FileParser;
-import wormbase.model.parser.ModelParser;
+//import wormbase.model.parser.FileParser;
+//import wormbase.model.parser.ModelParser;
 
 /**
  * @author jwong
@@ -20,9 +20,9 @@ public class TestClass {
 	 */
 	public static void main(String[] args) {
 		
-		String datafile = "test/test_datafiles/models.wrm";
+		String datafile = "test/test_datafiles/gene3.jace";
 		
-		ModelParser mp = new ModelParser(datafile);
+		
 
 		
 		System.out.println("End program");

@@ -12,7 +12,10 @@ public class RegexTest {
 		String testString = "?Gene   Evidence #Evidence"; // DELETE
 		//testString = "?Gene";
 		
-		assertTrue("String doesn't match",testString.matches("^\\?Gene.*"));
+		String regex = "^\\?Gene.*";
+		
+		
+		assertTrue("String doesn't match",false);
 		
 	}
 
