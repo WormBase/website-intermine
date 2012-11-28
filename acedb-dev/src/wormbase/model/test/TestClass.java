@@ -9,7 +9,9 @@ import java.io.Reader;
 import java.util.Scanner;
 
 import wormbase.model.parser.FileParser;
-import wormbase.model.parser.ModelParser;
+
+//import wormbase.model.parser.FileParser;
+//import wormbase.model.parser.ModelParser;
 
 /**
  * @author jwong
