@@ -1,8 +1,7 @@
 ##### wormmine  
 
 file info:  
-* ( acedb, perllib, scripts ): reference files  
-* intermine: wormmine working copy  
-* tomcat: configured for InterMine  
-* software: smoe configured software used with WormMine
+* ( acedb, perllib, scripts, bin ): 	reference files  
+* acedb-dev: 				eclipse project  
+* software: 				configured for InterMine
 
