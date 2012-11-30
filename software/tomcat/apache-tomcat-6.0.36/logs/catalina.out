@@ -5332,3 +5332,339 @@ org.intermine.pathquery.PathException: Unable to resolve path 'Gene.homologues.h
 92729 [http-8080-1] INFO org.intermine.api.search.UserRepository  - Populated repository with 0 items
 94316 [http-8080-1] INFO org.intermine.api.search.UserRepository  - Populated repository with 0 items
 94353 [http-8080-2] INFO org.directwebremoting.impl.DefaultRemoter  - Exec: AjaxServices.getNewsPreview()
+167943914 [http-8080-4] INFO org.intermine.sql.Database  - Shutdown - Closing datasource for Database jdbc:postgresql://localhost/userprofile-wormmine({platform=PostgreSQL, datasource.dataSourceName=db.userprofile-production, datasource.maxConnections=10, datasource.databaseName=userprofile-wormmine, datasource.class=org.postgresql.ds.PGPoolingDataSource, datasource.password=worminess, datasource.user=intermine, driver=org.postgresql.Driver, datasource.serverName=localhost} org.postgresql.Driver PostgreSQL) with ClassLoader WebappClassLoader
+  context: /wormmine
+  delegate: false
+  repositories:
+    /WEB-INF/classes/
+----------> Parent Classloader:
+org.apache.catalina.loader.StandardClassLoader@59c9b9ca
+
+167943918 [http-8080-4] INFO org.intermine.sql.Database  - Shutdown - Closing datasource for Database jdbc:postgresql://localhost/wormmine({platform=PostgreSQL, datasource.dataSourceName=db.production, datasource.maxConnections=50, datasource.databaseName=wormmine, datasource.class=org.postgresql.ds.PGPoolingDataSource, datasource.password=worminess, datasource.user=intermine, driver=org.postgresql.Driver, datasource.serverName=localhost} org.postgresql.Driver PostgreSQL) with ClassLoader WebappClassLoader
+  context: /wormmine
+  delegate: false
+  repositories:
+    /WEB-INF/classes/
+----------> Parent Classloader:
+org.apache.catalina.loader.StandardClassLoader@59c9b9ca
+
+28-Nov-2012 4:05:28 PM org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc
+SEVERE: The web application [/wormmine] registered the JDBC driver [org.postgresql.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+28-Nov-2012 4:05:28 PM org.apache.catalina.loader.WebappClassLoader clearReferencesThreads
+SEVERE: The web application [/wormmine] appears to have started a thread named [WriteBatch Flusher] but has failed to stop it. This is very likely to create a memory leak.
+28-Nov-2012 4:05:28 PM org.apache.catalina.loader.WebappClassLoader clearReferencesThreads
+SEVERE: The web application [/wormmine] appears to have started a thread named [WriteBatch Flusher] but has failed to stop it. This is very likely to create a memory leak.
+28-Nov-2012 4:05:28 PM org.apache.catalina.loader.WebappClassLoader clearReferencesThreads
+SEVERE: The web application [/wormmine] appears to have started a thread named [Thread-34] but has failed to stop it. This is very likely to create a memory leak.
+28-Nov-2012 4:05:28 PM org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context [/wormmine]
+28-Nov-2012 4:05:30 PM org.apache.catalina.startup.HostConfig deployWAR
+INFO: Deploying web application archive wormmine.war
+639 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Loading properties from bioFieldNames.properties
+640 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Merging in 27 mappings from bioFieldNames.properties
+640 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Loading properties from soClassName.properties
+641 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Merging in 2006 mappings from soClassName.properties
+642 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Loading properties from bioClassNames.properties
+643 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Merging in 12 mappings from bioClassNames.properties
+649 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Setting label as URL on url in DataSource
+649 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Setting label as Chromosomal Duplication on ChromosomalDuplication
+649 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Setting label as Reverse Primer on ReversePrimer
+649 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Setting label as Intergenic Region on IntergenicRegion
+649 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Setting label as snoRNA on SnoRNA
+649 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Setting label as UTRs on UTRs in SnoRNA
+649 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Setting label as CDSs on CDSs in SnoRNA
+649 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Setting label as Exon on Exon
+650 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Setting label as miRNA on MiRNA
+650 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Setting label as UTRs on UTRs in MiRNA
+650 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Setting label as CDSs on CDSs in MiRNA
+650 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Setting label as Natural Transposable Element on NaturalTransposableElement
+650 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Setting label as CRM on CRM
+650 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Setting label as ncRNA on NcRNA
+650 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Setting label as UTRs on UTRs in NcRNA
+650 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Setting label as CDSs on CDSs in NcRNA
+650 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Setting label as Oligo on Oligo
+650 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Setting label as SNP on SNP
+650 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Setting label as EST on EST
+651 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Setting label as Primer on Primer
+651 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Setting label as Chromosomal Translocation on ChromosomalTranslocation
+651 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Setting label as Enhancer on Enhancer
+651 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Setting label as rRNA on RRNA
+651 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Setting label as UTRs on UTRs in RRNA
+651 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Setting label as CDSs on CDSs in RRNA
+651 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Setting label as Chromosomal Inversion on ChromosomalInversion
+651 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Setting label as URL on url in DataSet
+651 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Setting label as Gene on Gene
+651 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Setting label as CDSs on CDSs in Gene
+652 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Setting label as UTRs on UTRs in Gene
+652 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Setting label as MD5 Checksum on md5checksum in Sequence
+652 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Setting label as Forward Primer on ForwardPrimer
+652 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Setting label as PCR Product on PCRProduct
+652 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Setting label as Microarray Oligo on MicroarrayOligo
+652 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Setting label as tRNA on TRNA
+652 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Setting label as UTRs on UTRs in TRNA
+652 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Setting label as CDSs on CDSs in TRNA
+652 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Setting label as mRNA on MRNA
+652 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Setting label as UTRs on UTRs in MRNA
+653 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Setting label as CDSs on CDSs in MRNA
+653 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Setting label as Transposable Element on TransposableElement
+653 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Setting label as Bio-Entity on BioEntity
+653 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Setting label as Chromosome Structure Variation on ChromosomeStructureVariation
+653 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Setting label as Regulatory Region on RegulatoryRegion
+653 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Setting label as Transposable Element Insertion Site on TransposableElementInsertionSite
+653 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Setting label as UTR on UTR
+653 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Setting label as Allele on Allele
+653 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Setting label as Chromosomal Deletion on ChromosomalDeletion
+653 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Setting label as Overlapping EST Set on OverlappingESTSet
+654 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Setting label as Transcript on Transcript
+654 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Setting label as UTRs on UTRs in Transcript
+654 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Setting label as CDSs on CDSs in Transcript
+654 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Setting label as Point Mutation on PointMutation
+654 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Setting label as Three Prime UTR on ThreePrimeUTR
+654 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Setting label as Chromosome Band on ChromosomeBand
+654 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Setting label as Intron on Intron
+654 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Setting label as Golden Path Fragment on GoldenPathFragment
+654 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Setting label as cDNA Clone on CDNAClone
+655 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Setting label as Clone Insert End on CloneInsertEnd
+655 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Setting label as Five Prime UTR on FivePrimeUTR
+655 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Setting label as CDS on CDS
+655 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Setting label as PubMed ID on pubMedId in Publication
+655 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Setting label as Chromosomal Transposition on ChromosomalTransposition
+655 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Setting label as Sequence Feature on SequenceFeature
+655 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Setting label as Sequence Variant on SequenceVariant
+655 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Setting label as TF Binding Site on TFBindingSite
+655 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Setting label as snRNA on SnRNA
+655 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Setting label as UTRs on UTRs in SnRNA
+656 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Setting label as CDSs on CDSs in SnRNA
+656 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Setting label as MD5 Checksum on md5checksum in Protein
+656 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Setting label as CDSs on CDSs in Protein
+656 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Setting label as Sequence Collection on SequenceCollection
+656 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Setting label as Chromosome on Chromosome
+656 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Setting label as Binding Site on BindingSite
+656 [http-8080-4] INFO org.intermine.web.logic.config.WebConfig  - Setting label as URL on url in Ontology
+658 [http-8080-4] INFO org.intermine.sql.Database  - Creating new Database jdbc:postgresql://localhost/userprofile-wormmine({platform=PostgreSQL, datasource.dataSourceName=db.userprofile-production, datasource.maxConnections=10, datasource.databaseName=userprofile-wormmine, datasource.class=org.postgresql.ds.PGPoolingDataSource, datasource.password=worminess, datasource.user=intermine, driver=org.postgresql.Driver, datasource.serverName=localhost} org.postgresql.Driver PostgreSQL) with ClassLoader WebappClassLoader
+  context: /wormmine
+  delegate: false
+  repositories:
+    /WEB-INF/classes/
+----------> Parent Classloader:
+org.apache.catalina.loader.StandardClassLoader@59c9b9ca
+ and parallelism 4
+1000 [http-8080-4] INFO org.intermine.objectstore.ObjectStoreAbstractImpl  - Creating new org.intermine.objectstore.intermine.ObjectStoreInterMineImpl with sequence = {}, model = "userprofile"
+1002 [http-8080-4] INFO org.intermine.objectstore.ObjectStoreAbstractImpl  - Creating new org.intermine.objectstore.intermine.ObjectStoreWriterInterMineImpl with sequence = {}, model = "userprofile"
+1128 [http-8080-4] INFO org.intermine.objectstore.intermine.ObjectStoreWriterInterMineImpl  - Generating cached metadata for table UserProfile
+1128 [http-8080-4] INFO org.intermine.objectstore.intermine.ObjectStoreWriterInterMineImpl  - Generating cached metadata for ClassDescriptor org.intermine.model.userprofile.UserProfile
+1128 [http-8080-4] INFO org.intermine.objectstore.intermine.ObjectStoreWriterInterMineImpl  - Generating cached metadata for table InterMineObject
+1128 [http-8080-4] INFO org.intermine.objectstore.intermine.ObjectStoreWriterInterMineImpl  - Generating cached metadata for ClassDescriptor org.intermine.model.InterMineObject
+1156 [http-8080-4] INFO org.intermine.sql.precompute.PrecomputedTableManager  - Loaded 0 precomputed table descriptions (plus 0 failed) in 0 ms
+1169 [http-8080-4] INFO org.intermine.web.struts.InitialiserPlugin  - Production database has serialNumber "4573769667365123361"
+1169 [http-8080-4] INFO org.intermine.web.struts.InitialiserPlugin  - Userprofile database has serialNumber "6413857578266119012"
+1169 [http-8080-4] WARN org.intermine.web.struts.InitialiserPlugin  - Serial numbers not equal: list upgrate needed
+1194 [http-8080-4] INFO org.intermine.sql.DatabaseUtil  - Pooled statement wrapping physical statement UPDATE savedbag SET intermine_state = 'NOT_CURRENT'
+1245 [http-8080-4] WARN org.intermine.web.struts.InitialiserPlugin  - initializeTrackers: trackerList isorg.intermine.api.tracker.TemplateTracker,org.intermine.api.tracker.ListTracker,org.intermine.api.tracker.LoginTracker,org.intermine.api.tracker.QueryTracker,org.intermine.api.tracker.KeySearchTracker
+1252 [http-8080-4] INFO org.intermine.api.tracker.TemplateTracker  - Creating new org.intermine.api.tracker.TemplateTracker tracker
+1273 [http-8080-4] INFO org.intermine.api.tracker.ListTracker  - Creating new org.intermine.api.tracker.ListTracker tracker
+1275 [http-8080-4] INFO org.intermine.api.tracker.LoginTracker  - Creating new org.intermine.api.tracker.LoginTracker tracker
+1277 [http-8080-4] INFO org.intermine.api.tracker.QueryTracker  - Creating new org.intermine.api.tracker.QueryTracker tracker
+1279 [http-8080-4] INFO org.intermine.api.tracker.KeySearchTracker  - Creating new org.intermine.api.tracker.KeySearchTracker tracker
+1283 [http-8080-4] WARN org.intermine.api.config.ClassKeyHelper  - No key defined for InterMineObject
+1283 [http-8080-4] WARN org.intermine.api.config.ClassKeyHelper  - No key defined for Sequence
+1283 [http-8080-4] WARN org.intermine.api.config.ClassKeyHelper  - No key defined for OntologyTermSynonym
+1283 [http-8080-4] WARN org.intermine.api.config.ClassKeyHelper  - No key defined for MeshTerm
+1284 [http-8080-4] WARN org.intermine.api.config.ClassKeyHelper  - No key defined for Comment
+1284 [http-8080-4] WARN org.intermine.api.config.ClassKeyHelper  - No key defined for SampleClass
+1284 [http-8080-4] WARN org.intermine.api.config.ClassKeyHelper  - No key defined for Synonym
+1284 [http-8080-4] WARN org.intermine.api.config.ClassKeyHelper  - problem loading class key: taxonid for class Organism
+1285 [http-8080-4] WARN org.intermine.api.config.ClassKeyHelper  - No key defined for OntologyAnnotation
+1285 [http-8080-4] WARN org.intermine.api.config.ClassKeyHelper  - No key defined for OntologyRelation
+1285 [http-8080-4] WARN org.intermine.api.config.ClassKeyHelper  - No key defined for SequenceVariant
+1285 [http-8080-4] WARN org.intermine.api.config.ClassKeyHelper  - No key defined for Location
+1285 [http-8080-4] WARN org.intermine.api.config.ClassKeyHelper  - No key defined for CrossReference
+1285 [http-8080-4] WARN org.intermine.api.config.ClassKeyHelper  - No key defined for Ontology
+1286 [http-8080-4] WARN org.intermine.api.config.ClassKeyHelper  - No key defined for SequenceFeature
+1286 [http-8080-4] WARN org.intermine.api.config.ClassKeyHelper  - No key defined for SequenceCollection
+1286 [http-8080-4] WARN org.intermine.api.config.ClassKeyHelper  - No key defined for SOTerm
+1286 [http-8080-4] WARN org.intermine.api.config.ClassKeyHelper  - No key defined for IntergenicRegion
+1286 [http-8080-4] WARN org.intermine.api.config.ClassKeyHelper  - No key defined for Exon
+1286 [http-8080-4] WARN org.intermine.api.config.ClassKeyHelper  - No key defined for Oligo
+1286 [http-8080-4] WARN org.intermine.api.config.ClassKeyHelper  - No key defined for SNP
+1287 [http-8080-4] WARN org.intermine.api.config.ClassKeyHelper  - No key defined for PCRProduct
+1287 [http-8080-4] WARN org.intermine.api.config.ClassKeyHelper  - No key defined for TransposableElement
+1287 [http-8080-4] WARN org.intermine.api.config.ClassKeyHelper  - No key defined for RegulatoryRegion
+1287 [http-8080-4] WARN org.intermine.api.config.ClassKeyHelper  - No key defined for TransposableElementInsertionSite
+1287 [http-8080-4] WARN org.intermine.api.config.ClassKeyHelper  - No key defined for UTR
+1287 [http-8080-4] WARN org.intermine.api.config.ClassKeyHelper  - No key defined for OverlappingESTSet
+1287 [http-8080-4] WARN org.intermine.api.config.ClassKeyHelper  - No key defined for PointMutation
+1287 [http-8080-4] WARN org.intermine.api.config.ClassKeyHelper  - No key defined for GeneFlankingRegion
+1288 [http-8080-4] WARN org.intermine.api.config.ClassKeyHelper  - No key defined for ChromosomeBand
+1288 [http-8080-4] WARN org.intermine.api.config.ClassKeyHelper  - No key defined for Intron
+1288 [http-8080-4] WARN org.intermine.api.config.ClassKeyHelper  - No key defined for GoldenPathFragment
+1288 [http-8080-4] WARN org.intermine.api.config.ClassKeyHelper  - No key defined for CDNAClone
+1288 [http-8080-4] WARN org.intermine.api.config.ClassKeyHelper  - No key defined for CloneInsertEnd
+1288 [http-8080-4] WARN org.intermine.api.config.ClassKeyHelper  - No key defined for CDS
+1288 [http-8080-4] WARN org.intermine.api.config.ClassKeyHelper  - No key defined for Chromosome
+1289 [http-8080-4] WARN org.intermine.api.config.ClassKeyHelper  - No key defined for BindingSite
+1289 [http-8080-4] WARN org.intermine.api.config.ClassKeyHelper  - No key defined for ChromosomeStructureVariation
+1289 [http-8080-4] WARN org.intermine.api.config.ClassKeyHelper  - No key defined for Allele
+1289 [http-8080-4] WARN org.intermine.api.config.ClassKeyHelper  - No key defined for EST
+1289 [http-8080-4] WARN org.intermine.api.config.ClassKeyHelper  - No key defined for Primer
+1289 [http-8080-4] WARN org.intermine.api.config.ClassKeyHelper  - No key defined for MicroarrayOligo
+1289 [http-8080-4] WARN org.intermine.api.config.ClassKeyHelper  - No key defined for NaturalTransposableElement
+1289 [http-8080-4] WARN org.intermine.api.config.ClassKeyHelper  - No key defined for CRM
+1290 [http-8080-4] WARN org.intermine.api.config.ClassKeyHelper  - No key defined for TFBindingSite
+1290 [http-8080-4] WARN org.intermine.api.config.ClassKeyHelper  - No key defined for ThreePrimeUTR
+1290 [http-8080-4] WARN org.intermine.api.config.ClassKeyHelper  - No key defined for FivePrimeUTR
+1290 [http-8080-4] WARN org.intermine.api.config.ClassKeyHelper  - No key defined for NcRNA
+1290 [http-8080-4] WARN org.intermine.api.config.ClassKeyHelper  - No key defined for MRNA
+1290 [http-8080-4] WARN org.intermine.api.config.ClassKeyHelper  - No key defined for ChromosomalDuplication
+1290 [http-8080-4] WARN org.intermine.api.config.ClassKeyHelper  - No key defined for ChromosomalTranslocation
+1290 [http-8080-4] WARN org.intermine.api.config.ClassKeyHelper  - No key defined for ChromosomalInversion
+1291 [http-8080-4] WARN org.intermine.api.config.ClassKeyHelper  - No key defined for ChromosomalDeletion
+1291 [http-8080-4] WARN org.intermine.api.config.ClassKeyHelper  - No key defined for ChromosomalTransposition
+1291 [http-8080-4] WARN org.intermine.api.config.ClassKeyHelper  - No key defined for ReversePrimer
+1291 [http-8080-4] WARN org.intermine.api.config.ClassKeyHelper  - No key defined for ForwardPrimer
+1291 [http-8080-4] WARN org.intermine.api.config.ClassKeyHelper  - No key defined for Enhancer
+1291 [http-8080-4] WARN org.intermine.api.config.ClassKeyHelper  - No key defined for SnoRNA
+1291 [http-8080-4] WARN org.intermine.api.config.ClassKeyHelper  - No key defined for MiRNA
+1291 [http-8080-4] WARN org.intermine.api.config.ClassKeyHelper  - No key defined for RRNA
+1292 [http-8080-4] WARN org.intermine.api.config.ClassKeyHelper  - No key defined for TRNA
+1292 [http-8080-4] WARN org.intermine.api.config.ClassKeyHelper  - No key defined for SnRNA
+1298 [http-8080-4] WARN org.intermine.api.bag.BagQueryHandler  - Can't add converter to bag-queries.xml, constraint-path 'Gene.homologues.homologue.organism.shortName' isn't in model.
+org.intermine.pathquery.PathException: Unable to resolve path 'Gene.homologues.homologue.organism.shortName': field 'homologues' of class 'org.intermine.model.bio.Gene' not found in model 'genomic'
+	at org.intermine.pathquery.Path.initialise(Path.java:217)
+	at org.intermine.pathquery.Path.<init>(Path.java:102)
+	at org.intermine.api.bag.BagQueryHandler.processAdditionalConverters(BagQueryHandler.java:203)
+	at org.intermine.api.bag.BagQueryHandler.startElement(BagQueryHandler.java:107)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.startElement(AbstractSAXParser.java:501)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractXMLDocumentParser.emptyElement(AbstractXMLDocumentParser.java:179)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1343)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2755)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:648)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:511)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:808)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:737)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:119)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1205)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:522)
+	at javax.xml.parsers.SAXParser.parse(SAXParser.java:395)
+	at org.intermine.util.SAXParser.parse(SAXParser.java:59)
+	at org.intermine.util.SAXParser.parse(SAXParser.java:42)
+	at org.intermine.api.bag.BagQueryHelper.readBagQueryConfig(BagQueryHelper.java:155)
+	at org.intermine.web.struts.InitialiserPlugin.loadBagQueries(InitialiserPlugin.java:453)
+	at org.intermine.web.struts.InitialiserPlugin.init(InitialiserPlugin.java:178)
+	at org.apache.struts.action.ActionServlet.initModulePlugIns(ActionServlet.java:871)
+	at org.apache.struts.action.ActionServlet.init(ActionServlet.java:359)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:212)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1206)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:1026)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:4421)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:4734)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:799)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:779)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:601)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:943)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:563)
+	at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1399)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.tomcat.util.modeler.BaseModelMBean.invoke(BaseModelMBean.java:297)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:836)
+	at com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:761)
+	at org.apache.catalina.manager.ManagerServlet.check(ManagerServlet.java:1500)
+	at org.apache.catalina.manager.ManagerServlet.deploy(ManagerServlet.java:670)
+	at org.apache.catalina.manager.ManagerServlet.doPut(ManagerServlet.java:435)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:640)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:563)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:861)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:606)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:662)
+1307 [http-8080-4] INFO org.intermine.api.profile.ProfileManager  - Database has userprofile version "2"
+1390 [http-8080-4] INFO org.intermine.api.search.UserRepository  - Populated repository with 3 items
+1489 [http-8080-4] WARN org.intermine.web.struts.InitialiserPlugin  - No AutoCompleter index found in database.
+1496 [Registrar] INFO org.intermine.web.struts.Registrar  - No registry address supplied: will not attempt to register.
+1502 [http-8080-4] INFO org.apache.struts.validator.ValidatorPlugIn  - Loading validation rules file from '/org/apache/struts/validator/validator-rules.xml'
+1502 [http-8080-4] INFO org.apache.struts.validator.ValidatorPlugIn  - Loading validation rules file from '/WEB-INF/validation.xml'
+1624 [http-8080-4] INFO org.apache.struts.tiles.TilesPlugin  - Tiles definition factory loaded for module ''.
+1635 [http-8080-4] INFO org.directwebremoting.impl.StartupUtil  - DWR Version 2.0.1 starting.
+1635 [http-8080-4] INFO org.directwebremoting.impl.StartupUtil  - - Servlet Engine: Apache Tomcat/6.0.36
+1635 [http-8080-4] INFO org.directwebremoting.impl.StartupUtil  - - Java Version:   1.6.0_26
+1635 [http-8080-4] INFO org.directwebremoting.impl.StartupUtil  - - Java Vendor:    Sun Microsystems Inc.
+1768 [http-8080-4] ERROR org.directwebremoting.util.LogErrorHandler  - Line=8 Attribute "class" must be declared for element type "create".
+1768 [http-8080-4] ERROR org.directwebremoting.util.LogErrorHandler  - Line=11 Attribute "class" must be declared for element type "create".
+16605 [http-8080-4] INFO org.apache.struts.tiles.TilesRequestProcessor  - Tiles definition factory found for request processor ''.
+16606 [http-8080-4] INFO org.intermine.api.search.UserRepository  - Populated repository with 0 items
+16610 [http-8080-4] WARN org.apache.struts.util.PropertyMessageResources  -   Resource InterMineWebApp_en_CA.properties Not Found.
+16611 [http-8080-4] WARN org.apache.struts.util.PropertyMessageResources  -   Resource InterMineWebApp_en.properties Not Found.
+18373 [http-8080-4] WARN org.apache.struts.util.PropertyMessageResources  -   Resource InterMineWebApp_en_US.properties Not Found.
+19117 [http-8080-6] INFO org.intermine.api.search.UserRepository  - Populated repository with 0 items
+19155 [http-8080-6] INFO org.directwebremoting.impl.DefaultRemoter  - Exec: AjaxServices.getNewsPreview()
+39186 [http-8080-5] INFO org.intermine.sql.precompute.PrecomputedTableManager  - Loaded 0 precomputed table descriptions (plus 0 failed) in 1 ms
+39580 [http-8080-5] INFO org.intermine.sql.writebatch.BatchWriterSimpleImpl  - Analysing table Integer_bag_3 took 4ms (5001 rows)
+40376 [http-8080-5] INFO sqllogger  - (VERBOSE) iql: SELECT a1_ FROM org.intermine.model.InterMineObject AS a1_ WHERE a1_.id IN ? 1: [1009826, 1002178, 1009824, 1002176, 1009830, 1002182, 1009828, 1002180, 1009834, 1002186, 1009832, 1002184, 1009838, 1002190, 1009836, 1002188, 1009842, 1002194, 1009840, 1002192] (showing 20 of 5001)
+generated sql: SELECT a1_.OBJECT AS a1_, a1_.id AS a1_id FROM InterMineObject AS a1_, Integer_bag_3 AS indirect0 WHERE a1_.id = indirect0.value ORDER BY a1_.id
+optimised sql: SELECT a1_.OBJECT AS a1_, a1_.id AS a1_id FROM InterMineObject AS a1_, Integer_bag_3 AS indirect0 WHERE a1_.id = indirect0.value ORDER BY a1_.id
+bag tables: 1 ms, generate: 18 ms, optimise: 0 ms,  ms,  estimate: 0 ms, execute: 15 ms, convert results: 377 ms, extra queries: 0 ms, total: 411 ms, rows: 5001
+40398 [http-8080-5] INFO sqllogger  - (VERBOSE) iql: SELECT DISTINCT a1_, a2_ FROM org.intermine.model.bio.Gene AS a1_, org.intermine.model.bio.Organism AS a2_ WHERE a1_.organism CONTAINS a2_ ORDER BY a1_.primaryIdentifier, a1_.secondaryIdentifier, a1_.symbol, a1_.name, a2_.shortName
+generated sql: SELECT a1_.id AS a1_id, a2_.id AS a2_id, a1_.primaryIdentifier AS orderbyfield0, a1_.secondaryIdentifier AS orderbyfield1, a1_.symbol AS orderbyfield2, a1_.name AS orderbyfield3, a2_.shortName AS orderbyfield4 FROM Gene AS a1_, Organism AS a2_ WHERE a1_.organismId = a2_.id ORDER BY a1_.primaryIdentifier, a1_.secondaryIdentifier, a1_.symbol, a1_.name, a2_.shortName, a1_.id, a2_.id LIMIT 5000
+optimised sql: SELECT a1_.id AS a1_id, a2_.id AS a2_id, a1_.primaryIdentifier AS orderbyfield0, a1_.secondaryIdentifier AS orderbyfield1, a1_.symbol AS orderbyfield2, a1_.name AS orderbyfield3, a2_.shortName AS orderbyfield4 FROM Gene AS a1_, Organism AS a2_ WHERE a1_.organismId = a2_.id ORDER BY a1_.primaryIdentifier, a1_.secondaryIdentifier, a1_.symbol, a1_.name, a2_.shortName, a1_.id, a2_.id LIMIT 5000
+bag tables: 0 ms, generate: 0 ms, optimise: 0 ms,  ms,  estimate: 1 ms, execute: 106 ms, convert results: 635 ms, extra queries: 419 ms, total: 1161 ms, rows: 5000
+40501 [http-8080-5] INFO org.intermine.sql.precompute.PrecomputedTableManager  - Creating new precomputed table CREATE TABLE temporary_precomp_4 AS SELECT a1_.id AS a1_id, a2_.id AS a2_id, a1_.primaryIdentifier AS orderbyfield0, a1_.secondaryIdentifier AS orderbyfield1, a1_.symbol AS orderbyfield2, a1_.name AS orderbyfield3, a2_.shortName AS orderbyfield4 FROM Gene AS a1_, Organism AS a2_ WHERE a1_.organismId = a2_.id ORDER BY a1_.primaryIdentifier, a1_.secondaryIdentifier, a1_.symbol, a1_.name, a2_.shortName, a1_.id, a2_.id
+41341 [http-8080-5] INFO org.intermine.sql.precompute.PrecomputedTableManager  - Creating 1 indexes for temporary_precomp_4
+41341 [http-8080-5] INFO org.intermine.sql.precompute.PrecomputedTableManager  - Creating index on temporary_precomp_4 (orderbyfield0, orderbyfield1, orderbyfield2, orderbyfield3, orderbyfield4, a1_id, a2_id)
+41634 [http-8080-5] INFO org.intermine.sql.precompute.PrecomputedTableManager  - ANALYSEing precomputed table temporary_precomp_4
+41711 [http-8080-5] INFO org.intermine.sql.precompute.PrecomputedTableManager  - Finished creating precomputed table temporary_precomp_4 for category goFaster
+41722 [http-8080-5] INFO org.intermine.sql.precompute.PrecomputedTableManager  - Dropped precomputed table temporary_precomp_4
+67412 [http-8080-3] INFO sqllogger  - (VERBOSE) iql: SELECT a1_ FROM org.intermine.model.InterMineObject AS a1_ WHERE a1_.id IN ? 1: [1000010, 1000011, 1000008, 1000006, 1000007, 1000005]
+generated sql: SELECT a1_.OBJECT AS a1_, a1_.id AS a1_id FROM InterMineObject AS a1_ WHERE a1_.id IN (1000005, 1000006, 1000007, 1000008, 1000010, 1000011) ORDER BY a1_.id
+optimised sql: SELECT a1_.OBJECT AS a1_, a1_.id AS a1_id FROM InterMineObject AS a1_ WHERE a1_.id IN (1000005, 1000006, 1000007, 1000008, 1000010, 1000011) ORDER BY a1_.id
+bag tables: 0 ms, generate: 1 ms, optimise: 0 ms,  ms,  estimate: 0 ms, execute: 1 ms, convert results: 3 ms, extra queries: 0 ms, total: 5 ms, rows: 6
+67421 [http-8080-3] INFO sqllogger  - (VERBOSE) iql: SELECT DISTINCT a1_, a2_, a3_ FROM org.intermine.model.bio.Gene AS a1_, org.intermine.model.bio.Organism AS a2_, org.intermine.model.bio.Chromosome AS a3_ WHERE (a1_.organism CONTAINS a2_ AND a1_.chromosome CONTAINS a3_) ORDER BY a1_.primaryIdentifier, a1_.secondaryIdentifier, a1_.symbol, a1_.name, a2_.shortName, a3_.primaryIdentifier
+generated sql: SELECT a1_.id AS a1_id, a2_.id AS a2_id, a3_.id AS a3_id, a1_.primaryIdentifier AS orderbyfield0, a1_.secondaryIdentifier AS orderbyfield1, a1_.symbol AS orderbyfield2, a1_.name AS orderbyfield3, a2_.shortName AS orderbyfield4, a3_.primaryIdentifier AS orderbyfield5 FROM Gene AS a1_, Organism AS a2_, Chromosome AS a3_ WHERE a1_.organismId = a2_.id AND a1_.chromosomeId = a3_.id ORDER BY a1_.primaryIdentifier, a1_.secondaryIdentifier, a1_.symbol, a1_.name, a2_.shortName, a3_.primaryIdentifier, a1_.id, a2_.id, a3_.id LIMIT 5000
+optimised sql: SELECT a1_.id AS a1_id, a2_.id AS a2_id, a3_.id AS a3_id, a1_.primaryIdentifier AS orderbyfield0, a1_.secondaryIdentifier AS orderbyfield1, a1_.symbol AS orderbyfield2, a1_.name AS orderbyfield3, a2_.shortName AS orderbyfield4, a3_.primaryIdentifier AS orderbyfield5 FROM Gene AS a1_, Organism AS a2_, Chromosome AS a3_ WHERE a1_.organismId = a2_.id AND a1_.chromosomeId = a3_.id ORDER BY a1_.primaryIdentifier, a1_.secondaryIdentifier, a1_.symbol, a1_.name, a2_.shortName, a3_.primaryIdentifier, a1_.id, a2_.id, a3_.id LIMIT 5000
+bag tables: 0 ms, generate: 1 ms, optimise: 0 ms,  ms,  estimate: 1 ms, execute: 98 ms, convert results: 31 ms, extra queries: 9 ms, total: 140 ms, rows: 5000
+67486 [http-8080-3] INFO org.intermine.sql.precompute.PrecomputedTableManager  - Creating new precomputed table CREATE TABLE temporary_precomp_5 AS SELECT a1_.id AS a1_id, a2_.id AS a2_id, a3_.id AS a3_id, a1_.primaryIdentifier AS orderbyfield0, a1_.secondaryIdentifier AS orderbyfield1, a1_.symbol AS orderbyfield2, a1_.name AS orderbyfield3, a2_.shortName AS orderbyfield4, a3_.primaryIdentifier AS orderbyfield5 FROM Gene AS a1_, Organism AS a2_, Chromosome AS a3_ WHERE a1_.organismId = a2_.id AND a1_.chromosomeId = a3_.id ORDER BY a1_.primaryIdentifier, a1_.secondaryIdentifier, a1_.symbol, a1_.name, a2_.shortName, a3_.primaryIdentifier, a1_.id, a2_.id, a3_.id
+67902 [http-8080-3] INFO org.intermine.sql.precompute.PrecomputedTableManager  - Creating 1 indexes for temporary_precomp_5
+67902 [http-8080-3] INFO org.intermine.sql.precompute.PrecomputedTableManager  - Creating index on temporary_precomp_5 (orderbyfield0, orderbyfield1, orderbyfield2, orderbyfield3, orderbyfield4, orderbyfield5, a1_id, a2_id, a3_id)
+68982 [http-8080-3] INFO org.intermine.sql.precompute.PrecomputedTableManager  - ANALYSEing precomputed table temporary_precomp_5
+69728 [http-8080-3] INFO org.intermine.sql.precompute.PrecomputedTableManager  - Finished creating precomputed table temporary_precomp_5 for category goFaster
+69741 [http-8080-3] INFO org.intermine.sql.precompute.PrecomputedTableManager  - Dropped precomputed table temporary_precomp_5
+73808 [http-8080-5] INFO sqllogger  - (VERBOSE) iql: SELECT a1_.id AS a2_, a1_ FROM org.intermine.model.InterMineObject AS a1_ WHERE a1_.id IN ? 1: [1000000]
+generated sql: SELECT a1_.id AS a2_, a1_.OBJECT AS a1_, a1_.id AS a1_id FROM InterMineObject AS a1_ WHERE a1_.id IN (1000000) ORDER BY a1_.id
+optimised sql: SELECT a1_.id AS a2_, a1_.OBJECT AS a1_, a1_.id AS a1_id FROM InterMineObject AS a1_ WHERE a1_.id IN (1000000) ORDER BY a1_.id
+bag tables: 0 ms, generate: 1 ms, optimise: 0 ms,  ms,  estimate: 0 ms, execute: 0 ms, convert results: 0 ms, extra queries: 0 ms, total: 1 ms, rows: 1
+73809 [http-8080-5] INFO sqllogger  - (VERBOSE) iql: SELECT DISTINCT a1_, a1_.organism AS a2_ FROM org.intermine.model.bio.Chromosome AS a1_ WHERE a1_.id = 1000011 ORDER BY a1_.id, a1_.length, a1_.name, a1_.primaryIdentifier, a1_.score, a1_.scoreType, a1_.secondaryIdentifier, a1_.symbol
+generated sql: SELECT a1_.id AS a1_id, a1_.id AS orderbyfield0 FROM Chromosome AS a1_ WHERE a1_.id = 1000011 ORDER BY a1_.id LIMIT 5000
+optimised sql: SELECT a1_.id AS a1_id, a1_.id AS orderbyfield0 FROM Chromosome AS a1_ WHERE a1_.id = 1000011 ORDER BY a1_.id LIMIT 5000
+bag tables: 0 ms, generate: 0 ms, optimise: 0 ms,  ms,  estimate: 1 ms, execute: 1 ms, convert results: 0 ms, extra queries: 2 ms, total: 4 ms, rows: 1
+88652 [http-8080-3] INFO org.intermine.sql.precompute.PrecomputedTableManager  - Creating new precomputed table CREATE TABLE temporary_precomp_6 AS SELECT a1_.id AS a1_id, a2_.id AS a2_id, a3_.id AS a3_id, a1_.primaryIdentifier AS orderbyfield0, a1_.secondaryIdentifier AS orderbyfield1, a1_.symbol AS orderbyfield2, a1_.name AS orderbyfield3, a2_.shortName AS orderbyfield4, a3_.primaryIdentifier AS orderbyfield5 FROM Gene AS a1_, Organism AS a2_, Chromosome AS a3_ WHERE a1_.organismId = a2_.id AND a1_.chromosomeId = a3_.id ORDER BY a1_.primaryIdentifier, a1_.secondaryIdentifier, a1_.symbol, a1_.name, a2_.shortName, a3_.primaryIdentifier, a1_.id, a2_.id, a3_.id
+89495 [http-8080-3] INFO org.intermine.sql.precompute.PrecomputedTableManager  - Creating 1 indexes for temporary_precomp_6
+89496 [http-8080-3] INFO org.intermine.sql.precompute.PrecomputedTableManager  - Creating index on temporary_precomp_6 (orderbyfield0, orderbyfield1, orderbyfield2, orderbyfield3, orderbyfield4, orderbyfield5, a1_id, a2_id, a3_id)
+89897 [http-8080-3] INFO org.intermine.sql.precompute.PrecomputedTableManager  - ANALYSEing precomputed table temporary_precomp_6
+90671 [http-8080-3] INFO org.intermine.sql.precompute.PrecomputedTableManager  - Finished creating precomputed table temporary_precomp_6 for category goFaster
+90680 [http-8080-3] INFO org.intermine.sql.precompute.PrecomputedTableManager  - Dropped precomputed table temporary_precomp_6
+118510 [http-8080-4] INFO org.intermine.sql.writebatch.BatchWriterSimpleImpl  - Analysing table Integer_bag_7 took 4ms (5000 rows)
+118926 [http-8080-4] INFO sqllogger  - (VERBOSE) iql: SELECT a1_ FROM org.intermine.model.InterMineObject AS a1_ WHERE a1_.id IN ? 1: [1009827, 1002179, 1009825, 1002177, 1009831, 1002183, 1009829, 1002181, 1009835, 1002187, 1009833, 1002185, 1009839, 1002191, 1009837, 1002189, 1009843, 1002195, 1009841, 1002193] (showing 20 of 5000)
+generated sql: SELECT a1_.OBJECT AS a1_, a1_.id AS a1_id FROM InterMineObject AS a1_, Integer_bag_7 AS indirect0 WHERE a1_.id = indirect0.value ORDER BY a1_.id
+optimised sql: SELECT a1_.OBJECT AS a1_, a1_.id AS a1_id FROM InterMineObject AS a1_, Integer_bag_7 AS indirect0 WHERE a1_.id = indirect0.value ORDER BY a1_.id
+bag tables: 1 ms, generate: 5 ms, optimise: 0 ms,  ms,  estimate: 0 ms, execute: 23 ms, convert results: 256 ms, extra queries: 0 ms, total: 285 ms, rows: 5000
+118940 [http-8080-4] INFO sqllogger  - (VERBOSE) iql: SELECT DISTINCT a1_, a2_, a3_ FROM org.intermine.model.bio.Gene AS a1_, org.intermine.model.bio.Chromosome AS a2_, org.intermine.model.bio.Location AS a3_ WHERE (a1_.chromosome CONTAINS a2_ AND a1_.locations CONTAINS a3_) ORDER BY a1_.primaryIdentifier, a2_.primaryIdentifier, a3_.end, a3_.start, a3_.strand
+generated sql: SELECT a1_.id AS a1_id, a2_.id AS a2_id, a3_.id AS a3_id, a1_.primaryIdentifier AS orderbyfield0, a2_.primaryIdentifier AS orderbyfield1, a3_.intermine_end AS orderbyfield2, a3_.intermine_start AS orderbyfield3, a3_.strand AS orderbyfield4 FROM Gene AS a1_, Chromosome AS a2_, Location AS a3_ WHERE a1_.chromosomeId = a2_.id AND a1_.id = a3_.featureId ORDER BY a1_.primaryIdentifier, a2_.primaryIdentifier, a3_.intermine_end, a3_.intermine_start, a3_.strand, a1_.id, a2_.id, a3_.id LIMIT 5000
+optimised sql: SELECT a1_.id AS a1_id, a2_.id AS a2_id, a3_.id AS a3_id, a1_.primaryIdentifier AS orderbyfield0, a2_.primaryIdentifier AS orderbyfield1, a3_.intermine_end AS orderbyfield2, a3_.intermine_start AS orderbyfield3, a3_.strand AS orderbyfield4 FROM Gene AS a1_, Chromosome AS a2_, Location AS a3_ WHERE a1_.chromosomeId = a2_.id AND a1_.id = a3_.featureId ORDER BY a1_.primaryIdentifier, a2_.primaryIdentifier, a3_.intermine_end, a3_.intermine_start, a3_.strand, a1_.id, a2_.id, a3_.id LIMIT 5000
+bag tables: 0 ms, generate: 0 ms, optimise: 0 ms,  ms,  estimate: 2 ms, execute: 122 ms, convert results: 327 ms, extra queries: 290 ms, total: 741 ms, rows: 5000
+118978 [http-8080-4] INFO org.intermine.sql.precompute.PrecomputedTableManager  - Creating new precomputed table CREATE TABLE temporary_precomp_8 AS SELECT a1_.id AS a1_id, a2_.id AS a2_id, a3_.id AS a3_id, a1_.primaryIdentifier AS orderbyfield0, a2_.primaryIdentifier AS orderbyfield1, a3_.intermine_end AS orderbyfield2, a3_.intermine_start AS orderbyfield3, a3_.strand AS orderbyfield4 FROM Gene AS a1_, Chromosome AS a2_, Location AS a3_ WHERE a1_.chromosomeId = a2_.id AND a1_.id = a3_.featureId ORDER BY a1_.primaryIdentifier, a2_.primaryIdentifier, a3_.intermine_end, a3_.intermine_start, a3_.strand, a1_.id, a2_.id, a3_.id
+119564 [http-8080-4] INFO org.intermine.sql.precompute.PrecomputedTableManager  - Creating 1 indexes for temporary_precomp_8
+119564 [http-8080-4] INFO org.intermine.sql.precompute.PrecomputedTableManager  - Creating index on temporary_precomp_8 (orderbyfield0, orderbyfield1, orderbyfield2, orderbyfield3, orderbyfield4, a1_id, a2_id, a3_id)
+119845 [http-8080-4] INFO org.intermine.sql.precompute.PrecomputedTableManager  - ANALYSEing precomputed table temporary_precomp_8
+120786 [http-8080-4] INFO org.intermine.sql.precompute.PrecomputedTableManager  - Finished creating precomputed table temporary_precomp_8 for category goFaster
+120796 [http-8080-4] INFO org.intermine.sql.precompute.PrecomputedTableManager  - Dropped precomputed table temporary_precomp_8
