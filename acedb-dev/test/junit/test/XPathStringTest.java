@@ -15,6 +15,11 @@ import org.junit.Test;
 import org.w3c.dom.Document;
 import org.xml.sax.InputSource;
 
+/**
+ * This reads XPath from String-based XML
+ * @author jwong
+ *
+ */
 public class XPathStringTest {
 
 	@Test

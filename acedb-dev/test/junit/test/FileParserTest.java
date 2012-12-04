@@ -13,7 +13,7 @@ public class FileParserTest {
 
 	@Test
 	public void test() throws IOException {
-		String datafile = "/acedb-dev/test/test_datafiles/gene3.jace";
+		String datafile = "/home/jwong/git/website-intermine/acedb-dev/test/test_datafiles/gene3.jace";
 		Integer[] paraLengths = {563, 315, 594};
 		
 		FileParser fp = new FileParser(datafile);

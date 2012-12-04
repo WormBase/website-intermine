@@ -75,10 +75,5 @@
 	<classpathentry kind="lib" path="intermine/intermine/objectstore/main/lib/torque-gen-3.2-dev.jar"/>
 	<classpathentry kind="lib" path="intermine/intermine/objectstore/main/lib/velocity-1.3.jar"/>
 	<classpathentry kind="lib" path="intermine/intermine/objectstore/main/lib/xercesImpl-2.6.1.jar"/>
-	<classpathentry kind="lib" path="intermine/bio/sources/wormbase-acedb/main/lib/dom4j-1.6.1.jar" sourcepath="/home/jwong/Programming/Java/Libs/dom4j-1.6.1/src">
-		<attributes>
-			<attribute name="javadoc_location" value="file:/home/jwong/Programming/Java/Libs/dom4j-1.6.1/docs/apidocs/"/>
-		</attributes>
-	</classpathentry>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
