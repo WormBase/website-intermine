@@ -11,8 +11,10 @@ import java.io.IOException;
 import javax.xml.parsers.*;
 import javax.xml.xpath.*;
 
+import org.apache.commons.lang.StringUtils;
 import org.junit.Test;
 import org.w3c.dom.Document;
+import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 //import org.dom4j.*;
 
@@ -50,6 +52,22 @@ public class XpathFileTest {
         String result = expr.evaluate(doc);
         
         assertEquals(result, "Java");
+        
+        
+        /**
+         * What if the XPath query returns a multiple result?
+         */
+        // Should return 'C' and 'Java'
+//        XPathExpression expr2 = xpath.compile("/root/lang/name");
+        XPathExpression expr2 = xpath.compile("/root/lang");
+        NodeList nodes = (NodeList) expr2.evaluate(doc, XPathConstants.NODESET);
+        String resultArray[] = new String[2];
+        for (int i = 0; i < nodes.getLength(); i++) {
+            resultArray[i] = StringUtils.strip(nodes.item(i).getTextContent()); 
+        }
+        
+        assertArrayEquals( new String[] {"C","Java"}, resultArray );
 	}
+	
 
 }
