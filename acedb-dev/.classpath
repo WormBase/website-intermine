@@ -6,6 +6,7 @@
 	<classpathentry kind="src" path="intermine/bio/core/main/src"/>
 	<classpathentry kind="src" path="intermine/bio/sources/wormbase-gff3-core/main/src"/>
 	<classpathentry kind="src" output="test" path="test"/>
+	<classpathentry kind="src" path="intermine/intermine/integrate/model/fulldata/build/gen/src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="lib" path="intermine/intermine/objectstore/main/lib/commons-beanutils-1.6.1.jar"/>
