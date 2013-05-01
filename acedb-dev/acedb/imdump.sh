@@ -27,7 +27,7 @@ do
 wb
 
 find ${model}
-show -j -f "$dumpdir/$model.jace"
+show -x -f "$dumpdir/$model.xml"
 EOF
         echo ... done.
     fi
