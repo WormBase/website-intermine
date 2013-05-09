@@ -2,7 +2,7 @@
 
 # expects models file
 
-dumpdir="imdumps";
+dumpdir="/nfs/wormbase/ace_xml_dumps";
 
 if [ ! -e "models" ]; then
     echo Cannot find models file.
@@ -15,12 +15,12 @@ if [ -z "$ACEDB" ]; then
 fi
 
 if [ ! -e "$dumpdir" ]; then
-mkdir imdumps
+mkdir $dumpdir 
 fi
 
 for model in `cat models`
 do
-    if [ ! -e "$dumpdir/$model.jace" ]
+    if [ ! -e "$dumpdir/$model.xml" ]
     then
         echo $model
         tace "$ACEDB" <<EOF > /dev/null
