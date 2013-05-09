@@ -9,8 +9,8 @@ public class test {
 	
 	@Test
 	public void test() {
-		int three[] = { 1,2,3 };
-		assertEquals(3, three.length);
+		char c = 'c';
+		String cs = charAt(c);
 		
 		assertEquals(3, three[three.length-1]);
 	}

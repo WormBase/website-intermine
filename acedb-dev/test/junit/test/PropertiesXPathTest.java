@@ -43,8 +43,6 @@ public class PropertiesXPathTest {
         XPathFactory xpf = XPathFactory.newInstance();
         XPath xpath = xpf.newXPath();
         
-        String result[] = new String[2];
-        int i=0;
         String propKey;
         while( propKeys.hasMoreElements() ){
         	propKey = (String) propKeys.nextElement();
