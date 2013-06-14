@@ -9,6 +9,10 @@ import org.junit.Test;
 
 public class RegexTest2 {
 
+	/**
+	 * Safer way, extracting all before first '.'
+	 */
+	
 	@Test
 	public void test() {
 		String dataPath = "ClassA.ClassB.Attr";
