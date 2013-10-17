@@ -2,6 +2,9 @@
 
 # expects models file
 
+# Database directory: /usr/local/wormbase/acedb/wormbase
+ACEDB_SUBDIR="wormbase";
+
 if [ $# -ne 1 ]; then
     echo "Usage: $0 xmldumpdestinationdirectory"
     echo ""
@@ -21,7 +24,7 @@ if [ -z "$ACEDB" ]; then
     ACEDB="/directory/not/set"
     for i in `find /usr -name tace` ; do
         ACEDB_BIN="`dirname $i`"
-        ACEDB="`dirname $ACEDB_BIN`"
+        ACEDB="`dirname $ACEDB_BIN`/$ACEDB_SUBDIR"
     done 2> /dev/null
     if [ ! -d "$ACEDB" ]; then
         echo "Did not find the executable 'tace'."
