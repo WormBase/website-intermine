@@ -20,7 +20,8 @@ if [ -z "$ACEDB" ]; then
     echo 'Did not specify AceDB dir in $ACEDB. Searching for tace...'
     ACEDB="/directory/not/set"
     for i in `find /usr -name tace` ; do
-        ACEDB="`dirname $i`"
+        ACEDB_BIN="`dirname $i`"
+        ACEDB="`dirname $ACEDB_BIN`"
     done 2> /dev/null
     if [ ! -d "$ACEDB" ]; then
         echo "Did not find the executable 'tace'."
@@ -38,7 +39,7 @@ do
     if [ ! -e "$dumpdir/$model.xml" ]
     then
         echo $model
-        $ACEDB/tace "$ACEDB" <<EOF > /dev/null
+        $ACEDB_BIN/tace "$ACEDB" <<EOF > /dev/null
 wb
 
 find ${model}
