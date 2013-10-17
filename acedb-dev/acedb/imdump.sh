@@ -2,7 +2,14 @@
 
 # expects models file
 
-dumpdir="/nfs/wormbase/ace_xml_dumps";
+if [ $# -ne 1 ]; then
+    echo "Usage: $0 xmldumpdestinationdirectory"
+    echo ""
+    echo "Example: $0 /nfs/wormbase_ws239"
+    exit 1
+fi
+
+dumpdir="$1"
 
 if [ ! -e "models" ]; then
     echo Cannot find models file.
@@ -10,8 +17,16 @@ if [ ! -e "models" ]; then
 fi
 
 if [ -z "$ACEDB" ]; then
-    ACEDB="/usr/local/wormbase/acedb/wormbase"
-    echo 'Did not specify database dir in $ACEDB. Using ' $ACEDB
+    echo 'Did not specify AceDB dir in $ACEDB. Searching for tace...'
+    ACEDB="/directory/not/set"
+    for i in `find /usr -name tace` ; do
+        ACEDB="`dirname $i`"
+    done 2> /dev/null
+    if [ ! -d "$ACEDB" ]; then
+        echo "Did not find the executable 'tace'."
+        exit 2
+    fi
+    echo "ACEDB set to: $ACEDB"
 fi
 
 if [ ! -e "$dumpdir" ]; then
@@ -23,7 +38,7 @@ do
     if [ ! -e "$dumpdir/$model.xml" ]
     then
         echo $model
-        tace "$ACEDB" <<EOF > /dev/null
+        $ACEDB/tace "$ACEDB" <<EOF > /dev/null
 wb
 
 find ${model}
