@@ -49,3 +49,7 @@ fi
 
 cd "$cwd"
 
+if [ ! -d ~/.intermine ] ; then
+  mkdir ~/.intermine
+fi
+
