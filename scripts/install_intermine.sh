@@ -41,6 +41,13 @@ rmdir intermine
 ln -s ../../intermine .
 
 cd ../..
+if [ $mode == "staging" ] ; then
+  # Due to disk space constraints, set-up intermine on the large NFS drive under /nfs on staging.
+  rm -rfi intermine
+  ln -s /nfs/wormbase/data/intermine intermine
+  rm -rfi intermine
+  cd /nfs/wormbase/data
+fi
 git clone https://github.com/WormBase/intermine.git
 cd intermine
 if [ ! $mode == "" ] ; then
