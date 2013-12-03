@@ -24,6 +24,7 @@ fi
 
 ./imdump.sh $dest
 echo -e "query find Gene Live\nshow -x -f $dest/Gene.xml\nquery find Protein Corresponding_CDS\nshow -x -f $dest/Protein.xml\nquery find CDS Method=\"curated\"\nshow -x -f $dest/CDS.xml\nquery find Transcript (Gene)\nshow -x -f $dest/Transcript.xml\nKeySet-Read species.ace\nshow -x -f $dest/Species.xml" | /usr/local/wormbase/acedb/bin-4.9.52/tace "/usr/local/wormbase/acedb/wormbase"
+chmod g+w $dest
 
 cd "$cwd"
 
