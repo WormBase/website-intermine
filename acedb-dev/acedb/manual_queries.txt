@@ -4,7 +4,7 @@ query find Protein Corresponding_CDS
 
 query find CDS Method="curated"
 
-query find Transcript (Gene OR Species="Pristionchus pacificus")
+query find Transcript (Gene)
 
 Also:
 

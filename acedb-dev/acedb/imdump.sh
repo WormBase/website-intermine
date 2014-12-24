@@ -1,52 +1,42 @@
 #!/bin/bash
 
+# DEPRECATED! This has been replaced by scripts/dump_ace.sh
+
 # expects models file
 
-# Database directory: /usr/local/wormbase/acedb/wormbase
-ACEDB_SUBDIR="wormbase";
-
 if [ $# -ne 1 ]; then
-    echo "Usage: $0 xmldumpdestinationdirectory"
+    echo "Usage: $0 WSXXX"
     echo ""
-    echo "Example: $0 /nfs/wormbase_ws239"
+    echo "Dumps files to /mnt/ephemeral0/intermine-builds/WSXXX"
     exit 1
 fi
 
-dumpdir="$1"
+VERSION=$1
+# Database directory: created dynamically based on version.
+ACEDB_BASE=/usr/local/wormbase/acedb
+ACEDB_BIN=${ACEDB_BASE}/bin
+ACEDB_DATA=${ACEDB_BASE}/wormbase_{$version}
+DUMPDIR="/mnt/ephemeral0/intermine-builds/$version"
 
 if [ ! -e "models" ]; then
     echo Cannot find models file.
     exit 1
 fi
 
-if [ -z "$ACEDB" ]; then
-    echo 'Did not specify AceDB dir in $ACEDB. Searching for tace...'
-    ACEDB="/directory/not/set"
-    for i in `find /usr -name tace` ; do
-        ACEDB_BIN="`dirname $i`"
-        ACEDB="`dirname $ACEDB_BIN`/$ACEDB_SUBDIR"
-    done 2> /dev/null
-    if [ ! -d "$ACEDB" ]; then
-        echo "Did not find the executable 'tace'."
-        exit 2
-    fi
-    echo "ACEDB set to: $ACEDB"
-fi
-
-if [ ! -e "$dumpdir" ]; then
-mkdir $dumpdir 
+if [ ! -e "$DUMPDIR" ]; then
+mkdir -p $DUMPDIR 
 fi
 
 for model in `cat models`
 do
-    if [ ! -e "$dumpdir/$model.xml" ]
+    if [ ! -e "$DUMPDIR/$model.xml" ]
     then
         echo $model
-        $ACEDB_BIN/tace "$ACEDB" <<EOF > /dev/null
+        $ACEDB_BIN/tace "$ACEDB_DATA" <<EOF > /dev/null
 wb
 
 find ${model}
-show -x -f "$dumpdir/$model.xml"
+show -x -f "$DUMPDIR/$model.xml"
 EOF
         echo ... done.
     fi
