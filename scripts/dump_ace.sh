@@ -52,7 +52,11 @@ wb
 find ${model}
 show -x -f "$DESTINATION/$model.xml"
 EOF
+
+        cd $DESTINATION
+        gzip $model.xml
         echo ... done.
+	cd "$CWD"
     fi
 done
 
@@ -67,6 +71,7 @@ done
 
 echo -e "query find Gene Live\nshow -x -f $DESTINATION/Gene.xml\nquery find Protein Corresponding_CDS\nshow -x -f $DESTINATION/Protein.xml\nquery find CDS Method=\"curated\"\nshow -x -f $DESTINATION/CDS.xml\nquery find Transcript (Gene)\nshow -x -f $DESTINATION/Transcript.xml\nKeySet-Read species.ace\nshow -x -f $DESTINATION/Species.xml" | ${ACEDB_BIN}/tace ${ACEDB_DATA}
 chmod g+w $DESTINATION
+cd $DESTINATION
 
 cd "$CWD"
 
