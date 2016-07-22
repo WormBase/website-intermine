@@ -18,7 +18,7 @@ ACEDB_BASE=/usr/local/wormbase/acedb
 ACEDB_BIN=${ACEDB_BASE}/bin
 ACEDB_DATA=${ACEDB_BASE}/wormbase_${VERSION}
 
-DESTINATION=/usr/local/wormbase/intermine/builds/$VERSION/test_data
+DESTINATION=/usr/local/wormbase/intermine/builds/$VERSION/${VERSION}-test-data
 
 # Create the destination directory
 if [ ! -e "$DESTINATION" ]; then
@@ -75,6 +75,8 @@ cat temp-Phenotype*  > Phenotype.xml
 cat temp-Species*  > Species.xml
 rm -f temp*
 echo ... done.
+cd ../
+tar xzf -c ${VERSION}-test-data.tgz ${VERSION}-test-data
 cd "$CWD"
 
 
