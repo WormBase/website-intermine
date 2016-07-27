@@ -26,7 +26,7 @@ if [ ! -e "$DESTINATION" ]; then
 fi
 
 
-GENES=("unc-26" "lin-15" "daf-2" "egl-15" "mir-1" "snt-1") 
+GENES=("unc-26"  "daf-2" "egl-15" "mir-1" "snt-1") 
 
 for GENE in ${GENES[@]}; do
     
