@@ -26,7 +26,9 @@ if [ ! -e "$DESTINATION" ]; then
 fi
 
 
-GENES=("unc-26"  "daf-2" "egl-15" "mir-1" "snt-1") 
+GENES=("unc-26"  "daf-2" "egl-15" "mir-1" "snt-1" "abc-1") 
+#GENES=("glh-4" "srb-2" "sucl-1" "gur-3" "arrd-4" "athp-2")
+#GENES=("actl-1" "cest-1" "cup-14" "fath-1" "glb-34" "hpx-2" "impk-1" "lep-2" "natb-1" "ncap-1" "nova-1" "npp-24" "pelo-1" "unc-9" "aak-2" "aakb-1" "aakg-1" "abl-1" "aex-3" "air-2" "aka-1" "anat-1" "apr-1" "ark-1" "atm-1" "bir-1" "bmk-1" "brp-1" "bub-1" "cam-1" "cat-2" "ddx-19" "egl-15" "git-1" "gld-1" "gpd-2" "gsk-3" "jnk-1" "lgl-1" "let-7" "glh-4" "srb-2" "sucl-1" "gur-3" "arrd-4" "athp-2" "unc-26"  "daf-2" "egl-15" "mir-1" "snt-1" "abc-1")
 
 for GENE in ${GENES[@]}; do
     
@@ -55,6 +57,8 @@ query find Gene_name $GENE ; follow Public_name_for ; follow Allele ; follow Phe
 show -x -f "$DESTINATION/temp-Phenotype-$GENE.xml"
 query find Gene_name $GENE ; follow Public_name_for ; follow Species
 show -x -f "$DESTINATION/temp-Species-$GENE.xml"
+#query find Gene_name $GENE ; follow Public_name_for ; follow Allele ; follow Strain
+#show -x -f "$DESTINATION/temp-Strain-$GENE.xml"
 
 EOF
 
@@ -72,7 +76,8 @@ cat temp-Expression_cluster*        > Expression_cluster.xml
 cat temp-Variation*  > Variation.xml
 cat temp-Life_stage* > Life_stage.xml
 cat temp-Phenotype*  > Phenotype.xml
-cat temp-Species*  > Species.xml
+cat temp-Species*    > Species.xml
+#cat temp-Strain*     > Strain.xml
 rm -f temp*
 echo ... done.
 cd ../
