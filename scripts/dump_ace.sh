@@ -18,10 +18,12 @@ ACEDB_BASE=/usr/local/wormbase/acedb
 ACEDB_BIN=${ACEDB_BASE}/bin
 ACEDB_DATA=${ACEDB_BASE}/wormbase_${VERSION}
 
+echo $ACEDB_DATA
+
 # Assuming that we are on AWS...
 #DESTINATION=/mnt/ephemeral0/intermine-builds/$VERSION
 DESTINATION=/usr/local/wormbase/intermine/builds/$VERSION
-
+echo $DESTINATION
 # Create the destination directory
 if [ ! -e "$DESTINATION" ]; then
     mkdir -p $DESTINATION
@@ -56,9 +58,9 @@ for model in `cat ${models}`
 do
     echo $model
 
-   # Some classes require special processing. 
+   # Some classes require special processing
     if [ "$model" == 'Gene' ]
-    then		
+    then
 	query="query find Gene Live"
     elif [ "$model" == 'Protein' ]
     then
@@ -72,10 +74,10 @@ do
     elif [ "$model" == 'Species' ]
     then
 	query="KeySet-Read acedb-dev/acedb/species.ace"
-    else 
+    else
 	query="find ${model}"
     fi
-    
+
 	echo "Dumping $model using query: $query"
     $ACEDB_BIN/tace "$ACEDB_DATA" <<EOF > /dev/null
 wb
@@ -106,3 +108,12 @@ done
 
 cd "$CWD"
 
+# Start dev2-instance
+echo "starting build instance"
+aws ec2 start-instances --instance-ids i-0e4caf9eb8d517add
+
+# Timeout to wait for instance to come back
+
+sleep 30
+echo $VERSION
+ssh 10.0.1.237 'ls /mnt/data/acedb_dumps/'

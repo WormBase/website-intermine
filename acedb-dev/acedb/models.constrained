@@ -1,9 +1,12 @@
+SO_term
 Anatomy_name
 Anatomy_term
 Antibody
 CDS
 Expr_pattern
 Expression_cluster
+Feature
+Feature_data
 Gene
 Gene_class
 Gene_name
@@ -23,3 +26,10 @@ Strain
 Transcript
 Variation
 Variation_name
+Transgene
+Construct
+Disease_model_annotation
+Molecule
+WBProcess
+Operon
+Rearrangement
