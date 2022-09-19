@@ -116,4 +116,7 @@ aws ec2 start-instances --instance-ids i-0e4caf9eb8d517add
 
 sleep 30
 echo $VERSION
-ssh 10.0.1.237 'ls /mnt/data/acedb_dumps/'
+
+scp -r "/usr/local/wormbase/intermine/builds/$VERSION" 10.0.1.215:/mnt/data/acedb_dumps/
+
+#ssh 10.0.1.237 'ls /mnt/data/acedb_dumps/'
